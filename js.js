@@ -1,30 +1,30 @@
 function printPDF() {
     // Get product information from span elements
-    var mahh = document.getElementById('mahh').textContent;
-    var tenhh = document.getElementById('tenhh').textContent;
-    var dvt = document.getElementById('dvt').textContent;
-    var ncc = document.getElementById('ncc').textContent;
+    var orderID = document.getElementById('orderID').textContent;
+    var nhom = document.getElementById('nhom').textContent;
+    var viTri = document.getElementById('viTri').textContent;
+    var thanhTien = document.getElementById('thanhTien').textContent;
 
     // Create a new PDF document
     var doc = new jsPDF();
 
     // Add title to the PDF
     doc.setFontSize(16);
-    doc.text('Báo cáo dữ liệu hàng hóa', 20, 20);
+    doc.text('Báo cáo Đơn hàng', 20, 20);
 
     // Add product information to the PDF
     doc.setFontSize(10);
     var y = 40;
-    doc.text('Mã hàng hóa:', 20, y);
+    doc.text('Mã đơn hàng:', 20, y);
     doc.text(mahh, 40, y);
     y += 10;
-    doc.text('Tên hàng hóa:', 20, y);
+    doc.text('Nhóm:', 20, y);
     doc.text(tenhh, 40, y);
     y += 10;
-    doc.text('Đơn vị tính:', 20, y);
+    doc.text('Vị trí:', 20, y);
     doc.text(dvt, 40, y);
     y += 10;
-    doc.text('NCC ưu tiên:', 20, y);
+    doc.text('Thành tiền:', 20, y);
     doc.text(ncc, 40, y);
 
     // Save the PDF document
@@ -41,19 +41,20 @@ function getUrlParameter(name){
     return results === null? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 // Get parameters from URL
-var mahh = getUrlParameter('mahh');
-var tenhh = getUrlParameter('tenhh');
-var dvt = getUrlParameter('dvt');
-var ncc = getUrlParameter('ncc');
+var orderID = getUrlParameter('orderID');
+var nhom = getUrlParameter('nhom');
+var viTri = getUrlParameter('viTri');
+var thanhTien = getUrlParameter('thanhTien');
 // Display parameters on the page
-document.getElementById('mahh').textContent=mahh;
-document.getElementById('tenhh').textContent=tenhh;
-document.getElementById('dvt').textContent=dvt;
-document.getElementById('ncc').textContent=ncc;
+var orderID = document.getElementById('orderID').textContent;
+var nhom = document.getElementById('nhom').textContent;
+var viTri = document.getElementById('viTri').textContent;
+var thanhTien = document.getElementById('thanhTien').textContent;
 window.onload = function(){
-    window.print();
+window.print();
 };
 
 // CONCATENATE("https://ninhpoal.github.io/goalapp/index.html?mahh=".[Mã hàng hoá],"&tenhh=",[Tên hàng hoá],"&dvt=",[DVT],"&ncc=",[NCC])
+// CONCATENATE("https://ninhpoal.github.io/goalapp/test.html?","phanloai=",[Phân loại],"&sochungtu=",[Số chứng từ],"&ngaychungtu=",[Ngày chứng từ],"&noidung=",[Diển giải],"&sotien=",text([Số tiền]),"&nguoinhan=",text([Người nhận]),"&nguoinop=",text([Người nộp tiền]))
 
 
