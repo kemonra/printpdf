@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  #mahh, #tenhh, #dvt, #ncc {
+    font-weight: bold;
+  }
+  
