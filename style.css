@@ -1,0 +1,63 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.company-info {
+  text-align: left; /* Align company info to the left */
+  margin-bottom: 20px;
+}
+
+.company-info p {
+  margin: 0; /* Remove default paragraph margins */
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.product-table th {
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.product-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+#mdh, #tenhh, #dongia, #soluong, #thanhtien {
+  font-weight: bold;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.logo {
+  position: absolute; /* Position logo absolutely */
+  top: 20px; /* Position logo 20px from the top */
+  right: 20px; /* Position logo 20px from the right */
+  max-width: 100px; /* Limit logo width */
+  height: auto; /* Maintain aspect ratio */
+}

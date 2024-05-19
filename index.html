@@ -1,22 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thông tin đơn hàng</title>
-    <style scr="css.css"></style>
-
+    <title>Hóa đơn bán hàng</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-    <h1>Thông tin đơn hàng</h1>
-    <p>Mã đơn hàng: <span id="orderID"></span></p>
-    <p>Nhóm: <span id="nhom"></span></p>
-    <p>Vị trí: <span id="viTri"></span></p>
-    <p>Thành tiền: <span id="thanhTien"></span></p>
-    <button onclick="printPDF()">In PDF</button>
-    <script src="js.js"></script>
-</div>
+        <div class="company-info"> <p>Công ty TNHH Nikkory</p>
+            <p>Địa chỉ: abc</p>
+            <p>SĐT: 12345665</p>
+        </div>
+        <h1 class="title">Hóa đơn bán hàng</h1>
+        <div class="paper-size-selection">
+            <label for="paperSize">Chọn khổ giấy:</label>
+            <select id="paperSize">
+                <option value="letter">Letter (8.5 x 11 in)</option>
+                <option value="A4">A4 (210 x 297 mm)</option>
+                <option value="A5">A5 (148 x 210 mm)</option>
+            </select>
+        </div>
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>Mã đơn hàng</th>
+                    <th>Nhóm</th>
+                    <th>Vị trí</th>
+                    <th>Số lượng</th>
+                    <th>Đơn giá</th>
+                    <th>Thành tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span id="orderID"></span></td>
+                    <td><span id="nhom"></span></td>
+                    <td><span id="viTri"></span> VNĐ</td>
+                    <td><span id="soLuong"></span></td>
+                    <td><span id="donGia"></span></td>
+                    <td><span id="thanhTien"></span> VNĐ</td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="generatePDF()">In PDF</button>
+        
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
